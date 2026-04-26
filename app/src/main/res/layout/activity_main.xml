@@ -7,19 +7,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/tvHeaderLabel"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="@dimen/size_0"
         android:layout_height="wrap_content"
-        android:text="@string/header_label"
-        android:textColor="@color/primary"
-        android:textSize="@dimen/text_3xl"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/spacing_6"
-        android:layout_marginStart="@dimen/spacing_6"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/topHeader_Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/headerLabel"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_3xl"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:layout_marginStart="@dimen/spacing_6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavbarWrapper"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_3"
+        android:layout_marginBottom="@dimen/spacing_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/surface_variant"
+        app:cardCornerRadius="@dimen/radius_2xl"
+        app:strokeWidth="0dp">
+        <LinearLayout
+            android:id="@+id/bottomNavbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_20"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/spacing_2"
+            android:paddingHorizontal="@dimen/spacing_4">
+            <Button
+                android:id="@+id/bottomNavbar_BtnHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/bottomNavbar_BtnHomeLabel"
+                android:textColor="@color/on_primary"
+                android:textSize="@dimen/text_xs"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="@dimen/radius_md"
+                app:icon="@drawable/ic_home"
+                app:iconGravity="textTop"
+                app:iconTint="@color/on_primary"
+
+                />
+            <Space
+                android:layout_width="@dimen/spacing_2"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/bottomNavbar_BtnWatchlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/bottomNavbar_BtnWatchlistLabel"
+                android:textColor="@color/on_primary"
+                android:textSize="@dimen/text_xs"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="@dimen/radius_md"
+                app:icon="@drawable/ic_watchlist"
+                app:iconGravity="textTop"
+                app:iconTint="@color/on_primary"
+                />
+            <Space
+                android:layout_width="@dimen/spacing_2"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/bottomNavbar_BtnCategories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/bottomNavbar_BtnCategoriesLabel"
+                android:textColor="@color/on_primary"
+                android:textSize="@dimen/text_xs"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="@dimen/radius_md"
+                app:icon="@drawable/ic_categories"
+                app:iconGravity="textTop"
+                app:iconTint="@color/on_primary"
+                />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintTop_toTopOf="@id/topHeader"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavbarWrapper">
+        <LinearLayout
+            android:id="@+id/mainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0"
+            android:orientation="horizontal"
+            android:background="@color/surface_variant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

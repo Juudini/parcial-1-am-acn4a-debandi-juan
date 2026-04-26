@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">parcial-1-am-acn4a-debandi_juan</string>
-    <string name="header_label">Cinemapedia</string>
+    <string name="headerLabel">Cinemapedia</string>
+    <string name="bottomNavbar_BtnHomeLabel">Home</string>
+    <string name="bottomNavbar_BtnSearchLabel">Search</string>
+    <string name="bottomNavbar_BtnCategoriesLabel">Categories</string>
+    <string name="bottomNavbar_BtnWatchlistLabel">Watchlist</string>
 </resources>
