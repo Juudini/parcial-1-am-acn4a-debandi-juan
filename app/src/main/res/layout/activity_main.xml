@@ -1,125 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/bg_default"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="@dimen/size_0"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="@dimen/spacing_6"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/topHeader_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_6"
+            android:layout_marginTop="@dimen/spacing_6"
             android:text="@string/headerLabel"
-            android:textColor="@color/primary"
+            android:textColor="@color/text_secondary"
             android:textSize="@dimen/text_3xl"
             android:textStyle="bold"
-            android:layout_marginTop="@dimen/spacing_6"
-            android:layout_marginStart="@dimen/spacing_6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomNavbarWrapper"
         android:layout_width="@dimen/size_0"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_3"
         android:layout_marginBottom="@dimen/spacing_4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cardBackgroundColor="@color/surface_variant"
+        app:cardBackgroundColor="@color/bg_navbar"
         app:cardCornerRadius="@dimen/radius_2xl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:strokeWidth="0dp">
+
         <LinearLayout
             android:id="@+id/bottomNavbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_20"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:paddingVertical="@dimen/spacing_2"
-            android:paddingHorizontal="@dimen/spacing_4">
+            android:paddingHorizontal="@dimen/spacing_4"
+            android:paddingVertical="@dimen/spacing_2">
+
             <Button
                 android:id="@+id/bottomNavbar_BtnHome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="@dimen/spacing_1"
+                android:paddingLeft="@dimen/spacing_0"
+                android:paddingTop="@dimen/spacing_0"
+                android:paddingRight="@dimen/spacing_0"
+                android:paddingBottom="@dimen/spacing_0"
                 android:text="@string/bottomNavbar_BtnHomeLabel"
-                android:textColor="@color/on_primary"
+                android:textColor="@color/text_selected"
                 android:textSize="@dimen/text_xs"
                 android:textStyle="bold"
-                app:backgroundTint="@color/primary"
+                app:backgroundTint="@color/bg_selected"
                 app:cornerRadius="@dimen/radius_md"
                 app:icon="@drawable/ic_home"
                 app:iconGravity="textTop"
-                app:iconTint="@color/on_primary"
+                app:iconPadding="@dimen/spacing_1"
+                app:iconSize="@dimen/icon_base"
+                app:iconTint="@color/icon_selected" />
 
-                />
             <Space
                 android:layout_width="@dimen/spacing_2"
                 android:layout_height="match_parent" />
+
             <Button
                 android:id="@+id/bottomNavbar_BtnWatchlist"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="@dimen/spacing_1"
+                android:paddingLeft="@dimen/spacing_0"
+                android:paddingTop="@dimen/spacing_0"
+                android:paddingRight="@dimen/spacing_0"
+                android:paddingBottom="@dimen/spacing_0"
                 android:text="@string/bottomNavbar_BtnWatchlistLabel"
-                android:textColor="@color/on_primary"
+                android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_xs"
                 android:textStyle="bold"
-                app:backgroundTint="@color/primary"
+                app:backgroundTint="@android:color/transparent"
                 app:cornerRadius="@dimen/radius_md"
                 app:icon="@drawable/ic_watchlist"
                 app:iconGravity="textTop"
-                app:iconTint="@color/on_primary"
-                />
+                app:iconPadding="@dimen/spacing_1"
+                app:iconSize="@dimen/icon_base"
+                app:iconTint="@color/icon_default" />
+
             <Space
                 android:layout_width="@dimen/spacing_2"
                 android:layout_height="match_parent" />
+
             <Button
                 android:id="@+id/bottomNavbar_BtnCategories"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="@dimen/spacing_1"
+                android:paddingLeft="@dimen/spacing_0"
+                android:paddingTop="@dimen/spacing_0"
+                android:paddingRight="@dimen/spacing_0"
+                android:paddingBottom="@dimen/spacing_0"
                 android:text="@string/bottomNavbar_BtnCategoriesLabel"
-                android:textColor="@color/on_primary"
+                android:textColor="@color/text_primary"
                 android:textSize="@dimen/text_xs"
                 android:textStyle="bold"
-                app:backgroundTint="@color/primary"
+                app:backgroundTint="@android:color/transparent"
                 app:cornerRadius="@dimen/radius_md"
                 app:icon="@drawable/ic_categories"
                 app:iconGravity="textTop"
-                app:iconTint="@color/on_primary"
-                />
+                app:iconPadding="@dimen/spacing_1"
+                app:iconSize="@dimen/icon_base"
+                app:iconTint="@color/icon_default" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_0"
-        app:layout_constraintTop_toTopOf="@id/topHeader"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavbarWrapper">
+        app:layout_constraintBottom_toTopOf="@id/bottomNavbarWrapper"
+        app:layout_constraintTop_toTopOf="@id/topHeader">
+
         <LinearLayout
             android:id="@+id/mainScrollView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_0"
+            android:background="@color/bg_surface"
             android:orientation="horizontal"
-            android:background="@color/surface_variant"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-        </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

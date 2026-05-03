@@ -57,7 +57,9 @@
     <dimen name="size_96">384dp</dimen>
 
     <!-- Icon -->
-    <dimen name="size_icon_sm">20dp</dimen>
-    <dimen name="size_icon_base">24dp</dimen>
-    <dimen name="size_button_h">48dp</dimen>
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_base">25dp</dimen>
+    <dimen name="icon_md">32dp</dimen>
+    <dimen name="icon_lg">40dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
 </resources>
