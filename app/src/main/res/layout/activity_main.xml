@@ -11,26 +11,29 @@
 
     <LinearLayout
         android:id="@+id/topHeader"
-        android:layout_width="@dimen/size_0"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="@dimen/spacing_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <TextView
             android:id="@+id/topHeader_Label"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_6"
-            android:layout_marginTop="@dimen/spacing_6"
+            android:layout_weight="1"
             android:text="@string/headerLabel"
             android:textColor="@color/text_secondary"
             android:textSize="@dimen/text_3xl"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="@dimen/icon_base"
+            android:layout_height="@dimen/icon_base"
+            android:src="@drawable/ic_search"
+            app:tint="@color/text_secondary"
+            />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
